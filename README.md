@@ -16,9 +16,9 @@ Installation
 1. Create a Subfolder "AgreonLibrary" in Project and add all .h and .cpp Files to it.
 
 
-2. Open the Project settings and make changes in the VC++-Verzeichnisse.
-	+ Choose the folder "include" in "Includeverzeichnisse".
-	+ Choose the folder "lib" in "Bibliotheksverzeichnisse".
+2. Open the Project settings and make changes in the VC++-Directories.
+	+ Choose the folder "include" in "Include Directories".
+	+ Choose the folder "lib" in "Library Directories".
 
 3. Add the following list in Linker->Eingabe : <br>
 	SDL.lib<br>
@@ -34,7 +34,7 @@ Installation
 5. Copy the files in dll to your main folder And your debug folder <br>
   -> [ProjectName]/Debug/ and [ProjectName]/[ProjectName]/
 
-6. Copy to C/C++->Präpozessor->präprozessordefinitionen : \_CRT\_SECURE_NO_WARNINGS
+6. Copy to C/C++->Prepozessor->preprozessordefinitions : \_CRT\_SECURE_NO_WARNINGS
 
 First Steps
 --------

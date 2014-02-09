@@ -36,7 +36,7 @@ Installation
 
 6. Copy to C/C++->Prepozessor->preprozessordefinitions : \_CRT\_SECURE_NO_WARNINGS
 
-First Steps
+Test it
 --------
 
 To test if you have done everything correctly just add the following code: <br>
@@ -44,13 +44,15 @@ To test if you have done everything correctly just add the following code: <br>
 #include "AgreonLibrary/Agreon.h"
 #include "AgreonLibrary/cGraphics.h
 
-int main( int argc, char[] argv )
+int main( int argc, char* args[] )
 {
 	cGraphics Graphics = new cGraphics();
 	return 0;
 }
 ```
 When you run the program nothing should happen.
+
+Now you can go to the tutorial.md to learn how to work with the Agreon Library!
 
 
 

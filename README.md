@@ -34,4 +34,4 @@ Installation
 5. Copy the files in dll to your main folder And your debug folder <br>
   -> [ProjectName]/Debug/ and [ProjectName]/[ProjectName]/
 
-6. Copy to C/C++->Präpozessor->präprozessordefinitionen "_CRT_SECURE_NO_WARNINGS"
+6. Copy to C/C++->Präpozessor->präprozessordefinitionen : \_CRT\_SECURE_NO_WARNINGS

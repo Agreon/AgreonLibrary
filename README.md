@@ -52,7 +52,7 @@ int main( int argc, char* args[] )
 ```
 When you run the program nothing should happen.
 
-Now you can go to the tutorial.md to learn how to work with the Agreon Library!
+Now you can go to the [tutorial](https://github.com/Agreon/AgreonLibrary/blob/master/tutorial.md) to learn how to work with the Agreon Library!
 
 
 

@@ -35,3 +35,22 @@ Installation
   -> [ProjectName]/Debug/ and [ProjectName]/[ProjectName]/
 
 6. Copy to C/C++->Präpozessor->präprozessordefinitionen : \_CRT\_SECURE_NO_WARNINGS
+
+First Steps
+--------
+
+To test if you have done everything correctly just add the following code: <br>
+```
+#include "AgreonLibrary/Agreon.h"
+#include "AgreonLibrary/cGraphics.h
+
+int main( int argc, char[] argv )
+{
+	cGraphics Graphics = new cGraphics();
+	return 0;
+}
+```
+When you run the program nothing should happen.
+
+
+

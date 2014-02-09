@@ -17,8 +17,8 @@ Installation
 
 
 2. Open the Project settings and make changes in the VC++-Verzeichnisse.
-	  - Choose the folder "include" in "Includeverzeichnisse".
-    - Choose the folder "lib" in "Bibliotheksverzeichnisse".
+	+ Choose the folder "include" in "Includeverzeichnisse".
+	+ Choose the folder "lib" in "Bibliotheksverzeichnisse".
 
 3. Add the following list in Linker->Eingabe : <br>
 	SDL.lib<br>

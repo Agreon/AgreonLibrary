@@ -16,14 +16,15 @@ int main( int argc, char* args[] )
 }
 
 ```
-Now we can create a Graphics Manager. The whole Library is seperated in Managers, e.g. for Graphics, Sound or Input<br>
+The whole Library is seperated in Managers, e.g. for Graphics, Sound or Input<br>
+Now we can create the Graphics Manager. 
 
 ```
 cGraphics* Graphics = new cGraphcis();
 ```
 
 With this manager, we can open a window and draw textures or text.<br>
-We will use the init function.<br>
+We will use the init function.
 
 ```
 // Syntax: init( screen_width, screen_height, window_title, window_icon );
@@ -138,7 +139,7 @@ int main( int argc, char* args[] )
 
 ```
 
-You should now see your texture in the window at te position 100, 100.
+You should now see your texture in the window at the position 100, 100.
 
 
 

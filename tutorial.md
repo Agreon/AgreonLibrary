@@ -139,7 +139,9 @@ int main( int argc, char* args[] )
 
 ```
 
-You should now see your texture in the window at the position 100, 100.
+You should now see your texture in the window at the position 100, 100.<br><br>
+
+For more information just look up the [Documentation](http://nosenshi.bplaced.com/files/AgreonLibrary/).
 
 
 

@@ -42,11 +42,11 @@ Test it
 To test if you have done everything correctly just add the following code: <br>
 ```
 #include "AgreonLibrary/Agreon.h"
-#include "AgreonLibrary/cGraphics.h
+#include "AgreonLibrary/cGraphics.h"
 
 int main( int argc, char* args[] )
 {
-	cGraphics Graphics = new cGraphics();
+	cGraphics* Graphics = new cGraphics();
 	return 0;
 }
 ```

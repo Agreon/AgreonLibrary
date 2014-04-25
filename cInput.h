@@ -23,6 +23,8 @@ private:
 	bool m_Keys[ 525 ];
 	bool m_LeftMouse;
 	bool m_RightMouse;
+	bool m_MouseWheelUp;
+	bool m_MouseWheelDown;
 public:
 	cInput();
 	~cInput();
@@ -49,6 +51,16 @@ public:
 	*	@returns if the right mouse is pressed.
 	*/
 	bool rightMousePressed();
+
+	/**
+	*	@returns if the mouse wheel was moved upwards.
+	*/	
+	bool mouseWheelUp();
+
+	/**
+	*	@return if the mouse wheel was moved down.
+	*/
+	bool mouseWheelDown();
 
 	/**
 	*	@returns the x coordinate of the mouse.

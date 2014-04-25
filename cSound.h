@@ -35,7 +35,7 @@ public:
 	*	@param	path	The path of the sound file.
 	*	@param	name	The name of the sound.
 	*/
-	void loadSound( const char* path, string name );
+	bool loadSound( const char* path, string name );
 
 	/**
 	*	Loads a music file in .mp3 format.
@@ -43,14 +43,14 @@ public:
 	*	@param	path	The path of the music file.
 	*	@param	name	The name of the music.
 	*/
-	void loadMusic( const char* path, string name );
+	bool loadMusic( const char* path, string name );
 
 	/**
 	*	Plays a sound or music.
 	*	
 	*	@param name The name of the sound or music.
 	*/
-	void playSound( string name );
+	int playSound( string name );
 
 	/**
 	*	Pauses a sound or music.
@@ -74,14 +74,6 @@ public:
 	void muteSound( string name );
 
 	/**
-	*	Sets the volume of a sound or music.
-	*	
-	*	@param name The name of the sound or music.
-	*	@param vol	The volume.
-	*/
-	void setVolume( string name, int vol );
-
-	/**
 	*	Pauses all Sounds.
 	*/
 	void pauseSounds();
@@ -97,6 +89,14 @@ public:
 	void muteSounds();
 
 	/**
+	*	Sets the volume of a sound or music.
+	*	
+	*	@param name The name of the sound or music.
+	*	@param vol	The volume.
+	*/
+	void setVolume( string name, int vol );
+
+	/**
 	*	Sets the main volume.
 	*
 	*	@param vol The volume.
@@ -109,5 +109,10 @@ public:
 	*/
 	Mix_Music* getSound( string name );
 
+	/**
+	*	@param name	The name of the chunk.
+	*	@returns the chunk object.
+	*/
+	Mix_Chunk* getChunk( string name );
 };
 

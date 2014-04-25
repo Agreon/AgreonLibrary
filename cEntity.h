@@ -21,7 +21,7 @@ class cEntity
 protected:
 	cGraphics* m_Graphics;
 	Vec2D* m_Position;
-	string m_Image;
+	string m_Texture;
 	int m_Width;
 	int m_Height;
 	int m_Rotation;
@@ -36,10 +36,12 @@ public:
 	*/
 	virtual void draw();
 
-	void setX( int x );
-	void setY( int y );
+	bool collision( cEntity *entity );
+
+	void setX( double x );
+	void setY( double y );
 	void setPosition( Vec2D* vec );
-	void setImage( string name );
+	void setTexture( string name );
 	void setWidth( int width );
 	void setHeight( int height );
 	void setRotation( int rotation );
@@ -48,7 +50,7 @@ public:
 	double getX();
 	double getY();
 	Vec2D* getPosition();
-	string getImage();
+	string getTexture();
 	int getWidth();
 	int getHeight();
 	int getRotation();

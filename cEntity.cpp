@@ -9,7 +9,7 @@ cEntity::cEntity()
 {
 	m_Graphics = 0;
 	m_Position = new Vec2D(0,0);
-	m_Image = "";
+	m_Texture = "";
 	m_Width = 0;
 	m_Height = 0;
 	m_Rotation = 0;
@@ -23,17 +23,27 @@ cEntity::~cEntity()
 
 void cEntity::draw()
 {
-	m_Graphics->drawTexture( m_Image,m_Position->getX(), m_Position->getY(), m_Rotation );
+	m_Graphics->drawTexture( m_Texture, m_Position->getX(), m_Position->getY(), m_Rotation );
 }
 
-void cEntity::setX( int x )
+bool cEntity::collision( cEntity* entity )
+{
+	if(m_Position->getY() >= entity->getY() + entity->getHeight()) return false;
+	if(m_Position->getX() >= entity->getX() + entity->getWidth()) return false;
+	if(m_Position->getY() + m_Height <= entity->getY()) return false;
+	if(m_Position->getX() + m_Width <= entity->getX()) return false;
+
+	return true;
+}
+
+void cEntity::setX( double x )
 {
 	m_Position->setX( x );
 }
 
-void cEntity::setY( int y )
+void cEntity::setY( double y )
 {
-	m_Position->setX( y );
+	m_Position->setY( y );
 }
 
 void cEntity::setPosition( Vec2D* vec )
@@ -41,9 +51,9 @@ void cEntity::setPosition( Vec2D* vec )
 	m_Position = vec;
 }
 
-void cEntity::setImage( string name )
+void cEntity::setTexture( string name )
 {
-	m_Image = name;
+	m_Texture = name;
 }
 
 void cEntity::setWidth( int width )
@@ -82,9 +92,9 @@ Vec2D* cEntity::getPosition()
 	return m_Position;
 }
 
-string cEntity::getImage()
+string cEntity::getTexture()
 {
-	return m_Image;
+	return m_Texture;
 }
 
 int cEntity::getWidth()

@@ -61,7 +61,7 @@ void cAnimation::update()
 void cAnimation::show(cGraphics* Graphics)
 {
 	if(m_Active == false) return;
-	Graphics->drawSection( m_Texture, m_Currentframe * m_FrameWidth, 0, m_FrameWidth, m_FrameHeight, m_X, m_Y, 0);
+	Graphics->drawSection( m_Texture, m_Currentframe * m_FrameWidth, 0, m_FrameWidth, m_FrameHeight, m_X, m_Y, m_Rotation );
 }
 
 

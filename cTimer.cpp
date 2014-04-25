@@ -22,7 +22,7 @@ void cTimer::update()
    	m_LastTime = m_CurrentTime;
 }
 
-int cTimer::getDelta()
+double cTimer::getDelta()
 {
-	return (int)m_DeltaTime;
+	return (double)m_DeltaTime/16;
 }

@@ -17,6 +17,8 @@ cInput::cInput()
 
 	m_LeftMouse	= false;
 	m_RightMouse = false;
+	m_MouseWheelDown = false;
+	m_MouseWheelUp = false;
 }
 
 
@@ -26,6 +28,8 @@ cInput::~cInput()
 
 bool cInput::handleInput()
 {
+	m_MouseWheelUp = false;
+	m_MouseWheelDown = false;
 	while (SDL_PollEvent( &m_Evt ) )
 	{
 		switch( m_Evt.type )
@@ -44,9 +48,17 @@ bool cInput::handleInput()
 			{
 				m_LeftMouse = true;
 			}
-			else
+			else if( m_Evt.button.button == SDL_BUTTON_RIGHT )
 			{
 				m_RightMouse = true;
+			}
+			else if( m_Evt.button.button == SDL_BUTTON_WHEELUP )
+			{
+				m_MouseWheelUp = true;
+			}
+			else if( m_Evt.button.button == SDL_BUTTON_WHEELDOWN )
+			{
+				m_MouseWheelDown = true;
 			}
 			m_MouseX = m_Evt.button.x;
 			m_MouseY = m_Evt.button.y;
@@ -56,7 +68,7 @@ bool cInput::handleInput()
 			{
 				m_LeftMouse = false;
 			}
-			else
+			else if( m_Evt.button.button == SDL_BUTTON_RIGHT )
 			{
 				m_RightMouse = false;
 			}
@@ -87,6 +99,16 @@ bool cInput::leftMousePressed()
 bool cInput::rightMousePressed()
 {
 	return m_RightMouse;
+}
+
+bool cInput::mouseWheelUp()
+{
+	return m_MouseWheelUp;
+}
+
+bool cInput::mouseWheelDown()
+{
+	return m_MouseWheelDown;
 }
 
 

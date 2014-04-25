@@ -1,3 +1,4 @@
+#pragma once
 /**
 *	@file Vec2D.h
 *

@@ -31,5 +31,5 @@ class cTimer
 		/**
 		*	@returns the DeltaTime.
 		*/
-		int getDelta();
+		double getDelta();
 };
